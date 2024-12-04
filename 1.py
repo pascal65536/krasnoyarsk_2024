@@ -11,10 +11,10 @@ print()
 
 def maxsqr():
     f = open('numbers.txt', encoding='utf-8')
-    data = f.readlines()
+    data = f.readline()
+    data = data.split(' ')
     maxNum = 0
     for j in data:
-        j = j.replace('\n', '')
         number = sqrt(int(j))
         if number.is_integer() and maxNum < int(j):
             maxNum = int(j)
