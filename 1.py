@@ -1,3 +1,10 @@
+def multiply() -> int:
+    s = 1
+    with open('numbers.txt').read().split(' ') as a:
+        for i in a:
+            s *= i
+    return s 	
+
 def summa() -> int:
     summ = 0
     with open('numbers.txt', 'r') as file:
