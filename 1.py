@@ -1,3 +1,12 @@
+def summa() -> int:
+    summ = 0
+    with open('numbers.txt', 'r') as file:
+        for line in file.readlines():
+            summ += int(line.rstrip())
+    
+    return summ
+
+
 def create() -> None:
     """
     Функция создания файла с простыми числами до 500 (Все числа записаны через пробел)
