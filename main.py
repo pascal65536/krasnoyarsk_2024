@@ -1,3 +1,10 @@
+from random import randint
+
+
+def summator():
+    with open("numbers.txt", "r", encoding="utf8") as file:
+        return sum(map(int, file.readline().split()))
+
 def mult_nums():
     with open('numbers.txt', encoding='utf-8') as f:
         data = f.read()
@@ -7,13 +14,10 @@ def mult_nums():
         mult *= int(x)
     return mult
 
-from random import randint
-
 def rand_nums():
     with open('numbers.txt', 'w') as f:
         for _ in range(1000):
             f.write(str(randint(1, 1000)) + ' ')
-
 
 def mult_even_nums():
     with open('numbers.txt', 'r', encoding='utf-8') as file:
@@ -26,3 +30,4 @@ def mult_even_nums():
             product *= num
 
         return product if even_numbers else 0
+
