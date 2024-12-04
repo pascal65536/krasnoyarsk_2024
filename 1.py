@@ -1,3 +1,18 @@
+def minever():
+    f = open('numbers.txt', 'r', encoding='utf8')
+    lines = f.read().split()
+    minnum = int(lines[0])
+    recnum = 0
+    for i in lines:
+        if int(i) < minnum and int(i) % 2 == 0:
+            minnum = int(i)
+    if minnum % 2 == 0:
+        recnum = minnum
+    else:
+        print('Таких чисел нет')
+    f.close()
+
+
 def multiply() -> int:
     s = 1
     with open('numbers.txt').read().split(' ') as a:
