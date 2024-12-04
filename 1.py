@@ -1,3 +1,17 @@
+from math import sqrt
+
+def maxsqr():
+    f = open('numbers.txt', encoding='utf-8')
+    data = f.readline()
+    data = data.split(' ')
+    maxNum = 0
+    for j in data:
+        number = sqrt(int(j))
+        if number.is_integer() and maxNum < int(j):
+            maxNum = int(j)
+    f.close()
+    return maxNum
+
 def minever():
     f = open('numbers.txt', 'r', encoding='utf8')
     lines = f.read().split()
@@ -50,3 +64,4 @@ def create() -> None:
 
         prime_numbers = list(map(str, prime_numbers))
         file.write(" ".join(list(map(str, prime_numbers))))
+
