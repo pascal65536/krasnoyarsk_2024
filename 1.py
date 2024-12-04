@@ -1,8 +1,13 @@
-primelist = [11, 13, 17, 19, 23, 27]
-for i in range(500):
-    for p in primelist:
-        if not i % p:
-            continue   
-    print(i, end=' ')
-print()
-
+def largest(debug=False):
+    '''
+    Функция для нахождения наибольшего числа из numbers.txt.
+    Args:
+        debug=False: boolean; Режим отладки
+    Returns:
+        int
+    '''
+    with open(['', '_test_'][debug] + 'numbers.txt', 'r', encoding='utf-8') as f:
+        data = map(int, f.read().split())
+        if debug:
+            print(data)
+        return max(data)
