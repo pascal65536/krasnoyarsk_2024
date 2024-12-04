@@ -23,8 +23,7 @@ def multiply() -> int:
 def summa() -> int:
     summ = 0
     with open('numbers.txt', 'r') as file:
-        for line in file.readlines():
-            summ += int(line.rstrip())
+        summ = sum(map(int, file.readlines()[0].rstrip().split()))
     
     return summ
 
