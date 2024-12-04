@@ -1,9 +1,8 @@
-def mult_nums():
-    with open('numbers.txt', encoding='utf-8') as f:
-        data = f.read()
-    nums = data.split()
-    mult = 1
-    for x in nums:
-        mult *= int(x)
-    return mult
-# Писать код сюда
+def multiple3() -> list[int]:
+    with open('numbers.txt', 'r', encoding='utf8') as numbers:
+        return [int(num) for num in numbers.read().split() if int(num) % 3 == 0]
+
+
+
+if __name__ == '__main__':
+    pass
