@@ -7,6 +7,13 @@ def mult_nums():
         mult *= int(x)
     return mult
 
+from random import randint
+
+def rand_nums():
+    with open('numbers.txt', 'w') as f:
+        for _ in range(1000):
+            f.write(str(randint(1, 1000)) + ' ')
+
 
 def mult_even_nums():
     with open('numbers.txt', 'r', encoding='utf-8') as file:
