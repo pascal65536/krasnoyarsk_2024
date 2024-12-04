@@ -18,4 +18,5 @@ def maxsqr():
         number = sqrt(int(j))
         if number.is_integer() and maxNum < int(j):
             maxNum = int(j)
+    f.close()
     return maxNum
